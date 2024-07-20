@@ -110,9 +110,44 @@ switch (true) {
 
 }
 
-console.log("achived grade: " + Grade);
+// console.log("achived grade: " + Grade);
 
 
+
+
+// ===============ternary operator even odd=====================
+
+
+
+
+
+let evenodd = 25
+
+let Output = (evenodd % 2 === 0 ) ? 'even' : 'odd';
+
+// let Output = `${(evenodd % 2 == 0) ? "given num is EVEN" : "given num is ODD"}`
+
+if (evenodd % 2 == 0) {
+//   console.log('even');
+}else {
+    // console.log('odd');
+}
+
+// console.log('Output');
+ 
+
+
+// =============leap year=============
+
+let Year = 2001;
+
+function Leapyear(Year) {
+    if (Year % 4 === 0) {
+        console.log('is leap year');
+    }else {
+        console.log('not a leap year');
+    }
+}
 
 
 
