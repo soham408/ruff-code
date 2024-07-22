@@ -139,15 +139,97 @@ if (evenodd % 2 == 0) {
 
 // =============leap year=============
 
-let Year = 2001;
+// let Year = 2001;
 
-function Leapyear(Year) {
-    if (Year % 4 === 0) {
-        console.log('is leap year');
+// function Leapyear(Year) {
+//     if (Year % 4 === 0) {
+//         console.log('is leap year');
+//     }else {
+//         console.log('not a leap year');
+//     }
+// }
+
+
+// ============================leap year==============================
+
+function isLeapYear(year) {
+    if (year % 4 ===0) {
+        if (year % 100 !== 0 || year % 400 === 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+function checkLeapYear(year) {
+    if (isLeapYear(year)) {
+        // console.log("is a leap year " + year);
     }else {
-        console.log('not a leap year');
+        // console.log("not a leap year " + year);
     }
 }
 
+// checkLeapYear(2024);
+
+
+
+
+// ===================for loop====================
+
+for (let i = 2; i <= 20; i++) {
+    const element = `outer loop value ${i}`;
+    for (let j = 1; j <= 10; j++) {
+        // console.log(i + '*' + j + ' = ' + i*j);
+    }
+    // console.log(i);
+    
+}
+
+
+
+// table of 5=====>
+
+for (let i = 1; i <=10; i++) {
+    const element = i;
+    // console.log(i * 5);
+}
+
+
+
+// ================sum of two num using while loop===================
+
+// let sum = 0
+let index = 1
+
+while (index <= 10) {
+// sum += index
+    index ++
+    // console.log(`sum of the numbers ${sum}`);
+}
+
+
+// ===========10 to 1 value printing for and while loop============
+
+// for (let index = 10; index >= 1; index--) {
+//     // const element = index;
+//     console.log(index);
+// }
+    
+
+// let i = 10
+//  while (i <= 1) {
+//     console.log(i);
+//     i--
+// }
+
+
+
+
+// let ind = 1
+// do {
+//     console.log(`${ind}`);
+//     ind ++
+// } while (ind <= 5);
 
 
