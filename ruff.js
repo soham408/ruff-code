@@ -233,3 +233,97 @@ while (index <= 10) {
 // } while (ind <= 5);
 
 
+// ===================pattern printing===========================
+
+let rows = 15;
+
+for (let i = 1; i <= rows; i++) {
+    let starPatter = ''; 
+    
+    for (let A = 1; A <= i; A++) {
+         starPatter += '*';
+       }
+    //    console.log(starPatter);
+    }
+for (let i = rows; i >= 1; i--) {
+    let starPatter = ''; 
+    
+    for (let A = 1; A <= i; A++) {
+         starPatter += '*';
+       }
+    //    console.log(starPatter);
+    }
+
+
+// =======================break and continue===================
+
+    for (let A = 1; A <= 10; A++) {
+        const element = A;
+        if (A === 5) {
+            // console.log('detected 5');
+            continue
+        }
+        // console.log(A);
+    }
+
+    for (let S = 1; S <=10; S++) {
+        
+        if (S == 7) {
+            // console.log(`detected 7`);
+            break
+        }
+        // console.log(S);
+        
+    }
+
+    // ==================function==============
+// even odd using functions================
+
+    let value = 22;
+    function evenOdd(params) {
+        if (value % 2 == 0) {
+            // console.log('even');
+        }else {
+            // console.log('odd');
+        }
+    }
+
+    // evenOdd()
+  
+    
+
+// ===============function==========
+// ================finding square of number using Function============
+
+    let val = 5;
+    function square() {
+    // console.log(val * val);    
+    }
+
+        // square()
+
+
+
+       function find(number) {
+        // return number * number;
+       }
+       const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+       numbers.forEach(num => {
+        // console.log(`The square of ${num} is ${find(num)}`);
+       })
+
+
+       
+
+       const findMax = function(num1, num2) {
+        return num1 > num2 ? num1 : num2;
+    };
+    
+    // Example usage
+    const number1 = 10;
+    const number2 = 20;
+    
+    const maxNumber = findMax(number1, number2);
+    console.log(`The maximum of ${number1} and ${number2} is ${maxNumber}`);
+    
+       
