@@ -324,6 +324,58 @@ for (let i = rows; i >= 1; i--) {
     const number2 = 20;
     
     const maxNumber = findMax(number1, number2);
-    console.log(`The maximum of ${number1} and ${number2} is ${maxNumber}`);
+    // console.log(`The maximum of ${number1} and ${number2} is ${maxNumber}`);
     
-       
+  
+
+// two num addition using arrow function
+
+const addNumbers = (a, b) => { 
+   return a + b
+
+};
+
+const num1 = 5;
+const num2 = 7;
+const ans = addNumbers(num1, num2);
+// console.log(`The sum of ${num1} and ${num2} is ${ans}.`);
+  
+  
+// write an arrow function to check if a string contains a character and return a Boolean value 
+
+// Arrow function to check if a string contains a character
+const containsCharacter = (str, char) => str.includes(char);
+
+// Example usage
+const myString = "Hello, world!";
+const myChar = "o";
+const debug = containsCharacter(myString, myChar);
+// console.log(`Does the string "${myString}" contain the character "${myChar}"? ${debug}`);
+
+
+//   not working
+   
+//    function phone(a, b = 2) {
+//     return a + b 
+    
+//    }
+
+//    phone()
+
+// function greeting(name, age = 'unknown') {
+//     `hello ${name} you are ${age} year old`
+// }
+
+// const greet =  greeting('soham', 23 );
+// console.log(greet);
+
+// Function to return a greeting message with a default value for age
+const greet = (name, age = 'unknown') => `Hello, ${name}! You are ${age} years old.`;
+
+// Example usage
+const greeting1 = greet('Alice', 30);
+const greeting2 = greet('Bob');
+
+// console.log(greeting1); // Output: Hello, Alice! You are 30 years old.
+// console.log(greeting2); // Output: Hello, Bob! You are unknown years old.
+
