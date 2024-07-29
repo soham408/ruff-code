@@ -379,3 +379,119 @@ const greeting2 = greet('Bob');
 // console.log(greeting1); // Output: Hello, Alice! You are 30 years old.
 // console.log(greeting2); // Output: Hello, Bob! You are unknown years old.
 
+
+// ===================Array=============================
+
+const myArr = [1, 2, 3, 4, 5];
+
+// console.log(myArr[4]);
+// console.log(myArr[1]);
+// console.log(myArr[0]);
+
+// myArr.push(6)
+// myArr.pop()
+// myArr.shift()
+// myArr.unshift(9)
+// console.log(myArr);
+
+// how to access the first and last element of the array and log them to the console
+
+const dubbledmyArr = myArr.map(function(myArr){
+    return myArr * 2
+})
+
+// console.log(dubbledmyArr);
+
+
+
+// use the filter method to create a new array with only even numbers and log new array
+
+const evenArr = myArr.filter(function(myArr) {
+    return myArr % 2 === 0
+})
+
+// console.log(evenArr);
+
+//use the reduce method to calculate the sum of all numbers in the array and log the result
+
+const sumOfnum = myArr.reduce(function(myArr, currentValue) {
+    return myArr + currentValue
+})
+
+// console.log(sumOfnum);
+
+
+//use a for loop to iterate over the array ang log each element too the console
+
+for (let i = 0; i < myArr.length; i++) {
+    // console.log(myArr[i]);
+    
+}
+
+
+//The forEach() method of Array instances executes a provided function once for each array element.
+
+myArr.forEach(element => {
+    // console.log(element);
+});
+
+
+//create a two-dimensional array (matrix) and log the entire array to the console
+
+// Example two-dimensional array (matrix)
+// const matrix = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
+
+// Log the entire array to the console
+// console.log(matrix);
+
+// console.log(matrix[6]);
+
+
+// Example two-dimensional array (matrix)
+const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+// Access and log a specific element
+// For example, to access the element in the second row and third column (value 6)
+const row = 1; // second row (index starts from 0)
+const col = 1; // third column (index starts from 0)
+
+const specificElement = matrix[row][col];
+// console.log(`Element at matrix[${row}][${col}] = ${specificElement}`);
+
+
+
+//    Objects
+
+const Book = {
+    Bookname: "Wings of fire",
+    Author: "Arun tiwari",
+    published_year: 1988,
+
+    // getBookinfo: function() {
+    //     return `${this.Bookname} by ${this.Author}`
+    // }
+
+    // update something in main objects
+    updateyear: function (newyear) {
+        this.year = newyear
+        // console.log(this);
+    }
+}
+
+Book.updateyear(2000)
+// console.log(Book);
+// console.log(Book.Bookname);
+// console.log(Book.Author);
+
+// console.log(Book["Bookname"]);
+// console.log(Book["Author"]);
+// function  getBookinfo() {
+//     return `${this.Bookname} ${this.Author}`
+// }
+
+// console.log(getBookinfo);
+// console.log(Book.getBookinfo())
