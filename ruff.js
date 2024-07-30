@@ -495,3 +495,56 @@ Book.updateyear(2000)
 
 // console.log(getBookinfo);
 // console.log(Book.getBookinfo())
+
+const library = {
+    name: "public library",
+    books: [
+        {
+            title: "steve jobs",
+            author: "walter issacson",
+            year: 2002,
+            getInfo: function() {
+                return `${this.title} (${this.year})`;
+              }
+        },
+        {
+            title: "mazhi janmthep",
+            author: "Rajendra Vaishmpayan",
+            year: 2015,
+            getInfo: function() {
+                return `${this.title} (${this.year})`;
+              }
+        },
+        {
+            title: "wings of fire",
+            author: "arun tiwari",
+            year: 2016,
+            getInfo: function() {
+                return `${this.title} (${this.year})`;
+              }
+           
+        }
+        
+    ]
+}
+
+
+// Log the name of the library
+// console.log(`Library Name: ${library.name}`);
+
+// Log the titles of all the books in the library using the getInfo method
+library.books.forEach(book => {
+//   console.log(book.getInfo());
+});
+
+
+// console.log(library.books())
+
+// console.log(library);
+
+// console.log(library.name);
+// console.log(library["name"]);
+// library.books.forEach(book => {
+//     console.log(`book names ${book.title}`);
+// });
+
