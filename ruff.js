@@ -548,3 +548,55 @@ library.books.forEach(book => {
 //     console.log(`book names ${book.title}`);
 // });
 
+
+
+// template literals ES 6
+
+const name = "soham"
+const myage = 23
+
+// console.log(`my name is ${name} and i ${myage} year old`);
+
+const multilinestringusingtemplateliterals = `hello my name is soham intermidiate web dev`
+
+// console.log(multilinestringusingtemplateliterals);
+
+// destructuring 
+// array
+const extractvalueusingdestructuring = [1, 2, 3, 4]
+
+// let [val1, val2, val3] = extractvalueusingdestructuring;
+let [val1, , val2] = extractvalueusingdestructuring;
+
+// console.log(val1)
+// console.log(val2)
+// console.log(val3)
+
+// object
+const objDistruct = {
+    biography: "wings of fire",
+    author: "arun tiwari"
+}
+
+let {biography, author} = objDistruct
+// console.log(biography);
+// console.log(author);
+
+// console.log(`my fev book is ${objDistruct.biography} by ${objDistruct.author}`);
+
+// spread and rest oprator
+// spread
+const additionalArr = [1, 2, 3]
+const addArr = [4, 5]
+
+const murgeArr = [...additionalArr, ...addArr, 6, 7]
+
+// console.log(murgeArr);
+
+function sumNum(...num) {
+    return sum1 + sum2
+}
+
+const Ans = sumNum(1, 2, 3, 4, 5)
+
+console.log(sumNum);
