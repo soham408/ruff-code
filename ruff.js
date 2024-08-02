@@ -594,9 +594,41 @@ const murgeArr = [...additionalArr, ...addArr, 6, 7]
 // console.log(murgeArr);
 
 function sumNum(...num) {
-    return sum1 + sum2
+    // return sum1 + sum2
 }
 
 const Ans = sumNum(1, 2, 3, 4, 5)
 
-console.log(sumNum);
+// console.log(sumNum);
+
+
+//Default function parameters
+
+function Dfault(cal1, cal2 = 1){
+return cal1 + cal2;
+
+}
+
+
+// without second parameter
+// console.log(Dfault(5));
+
+// with second parameter
+// console.log(Dfault(5, 5));
+ 
+
+//enhanced object literals
+
+let PRN = 123456789
+let Rollnum = 17
+
+const student = {
+    PRN,
+    Rollnum,
+    student() {
+       return `${PRN} and ${Rollnum}`
+       
+    }
+}
+// console.log(student);
+
