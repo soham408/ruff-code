@@ -8,86 +8,16 @@
         .myelement {
             background-color: cornflowerblue;
         }
-    </style>
-</head>
-<body>
-    <div class="myelement"> Dom manuplation</div>
-    <div id="re_move">select and remove dom element</div>
 
-<div>
-    Lorem ipsum, dolor sit amet consectetur
-     adipisicing elit. Velit, alias consectetur.
-      Ratione accusantium iure quasi illo, sequi, itaque quibusdam cumque dolorem a
-       laborum pariatur eos quidem nostrum eum rerum consectetur.
-</div>
-
-<ul>
-    <li>hp victus 15</li>
-    <li>Oppo A16</li>
-    <li>Arcticfox</li>
-</ul>
-
-<div id="paretElement">
-
-    <p>1st child</p>
-    <p>2nd child</p>
-    <p>last child</p>
-</div>
-
-<div>
-    <img id="myimg" src="https://images.pexels.com/photos/19301889/pexels-photo-19301889/free-photo-of-photo-of-reed-grass-against-the-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">
-</div>
-
-<button id="mybtn">Chenge text</button>
-
-<p id="mypara">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ullam laboriosam repudiandae nostrum, quam inventore sed quisquam, eos nobis culpa necessitatibus temporibus, ipsa voluptate odit veniam deleniti est molestias illum?
-</p>
-
-    <script>
-       const element = document.querySelector(".myelement");
-
-       element.textContent = "selecting and manipulating element"
-       element.style.backgroundColor = 'cornflowerblue'
-    
-       const Dom_remove =  document.getElementById("re_move");
-       //removing the dom element
-       Dom_remove.remove()
-
-       const paretElement = document.getElementById("paretElement");
-       if (paretElement.lastChild) {
-        paretElement.removeChild(paretElement.lastChild)
-       }
-
-       const imgEle = document.getElementById("myimg");
-       imgEle.setAttribute ('src', URL = "https://images.pexels.com/photos/27435844/pexels-photo-27435844/free-photo-of-a-statue-of-a-man-on-a-horse-in-the-middle-of-a-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-
-       const button = document.getElementById('mybtn');
-       const paragraph = document.getElementById('mypara');
-
-       
-        button.addEventListener('click', () => {
-            paragraph.textContent = 'hey i am a fresher web developer';
-        })
-       
-    </script>
-
-</body>
-</html> 
-
-
-
-
-
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chenge tect element</title>
-    <style>
-        .myelement {
-            background-color: cornflowerblue;
+        .currsor{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* background-color: blueviolet; */
         }
     </style>
 </head>
@@ -125,6 +55,9 @@
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ullam laboriosam repudiandae nostrum, quam inventore sed quisquam, eos nobis culpa necessitatibus temporibus, ipsa voluptate odit veniam deleniti est molestias illum?
 </p>
 
+
+<div class="currsor" id="hovercurrsor">Hover me</div>
+
     <script>
        const element = document.querySelector(".myelement");
 
@@ -151,12 +84,20 @@
             paragraph.textContent = 'hey i am a fresher web developer';
         })
        
+        document.addEventListener('DOMContentLoaded', () => {
+            const hovercurrsor = document.getElementById('hovercurrsor');
+
+         hovercurrsor = document.getElementById("hovercurrsor")
+
+         hovercurrsor.addEventListener('mouseover', () => {
+            hovercurrsor.style.borderColor = 'red'
+        })
+    })
+
     </script>
 
 </body>
 </html> 
-
-
 
 
 
