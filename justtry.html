@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image Visibility</title>
+</head>
+<body>
+    <img id="myImage" src="https://images.pexels.com/photos/21739955/pexels-photo-21739955/free-photo-of-sea-and-naples-on-coast-on-horizon.jpeg" alt="Sample Image">
+    <script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const image = document.getElementById('myImage');
+    
+    image.addEventListener('dblclick', () => {
+        if (image.style.display === 'none') {
+            image.style.display = 'block';
+        } else {
+            image.style.display = 'none';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

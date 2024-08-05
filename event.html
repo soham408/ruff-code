@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+   <!-- <img id="myImage" src="https://images.pexels.com/photos/21739955/pexels-photo-21739955/free-photo-of-sea-and-naples-on-coast-on-horizon.jpeg" alt="" srcset=""> -->
+
+   <img id="myImage" src="https://images.pexels.com/photos/21739955/pexels-photo-21739955/free-photo-of-sea-and-naples-on-coast-on-horizon.jpeg" alt="Sample Image">
+
+   <button id="btn">Change Text</button>
+   <p id="para">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat beatae ad molestiae voluptatum at recusandae id velit adipisci sit. Consequuntur voluptas distinctio iste ducimus sed enim itaque officiis, eveniet aliquid!
+   </p>  
+   
+   <div id="mycolor"  style="width: 200px; height: 200px; background-color: red;"> Hover On Me</div>
+
+   <input type="text" id="myinput" placeholder="type here">
+   <input type="text" id="myput" placeholder="type here">
+   <button id="subMIT">submit</button>
+
+
+   <script>
+    const button = document.getElementById('btn')
+    const para = document.getElementById('para')
+
+    button.addEventListener('click', () => {
+        para.textContent = 'looking for internahip in growing startup'
+
+    })
+
+
+        document.addEventListener('DOMContentLoaded', (e) => {
+           const image = document.getElementById('myImage');
+           
+           image.addEventListener('dblclick', (e) => {
+                if (image.style.display === 'none') {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            })
+            })
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mycolor = document.getElementById('mycolor');
+
+            mycolor.addEventListener('mouseover', () => {
+                mycolor.style.backgroundColor = 'red';
+
+            mycolor.addEventListener('mouseout', () => {
+                mycolor.style.backgroundColor = 'green';
+            })
+            })
+        })
+
+        
+
+        const myinput = addEventListener('keydown', (e) => {
+         console.log(`clicked ${e.key}`);
+    
+       })
+
+        const myput = addEventListener('keyup', (e) => {
+         console.log(`clicked ${e.key}`);
+    
+       })
+       
+
+
+   </script>
+</body>
+</html>
