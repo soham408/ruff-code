@@ -19,10 +19,26 @@
    </p>  
    
    <div id="mycolor"  style="width: 200px; height: 200px; background-color: red;"> Hover On Me</div>
-
+   
+   
+    <!-- <label for="myinput">name :</label>
    <input type="text" id="myinput" placeholder="type here">
+
+   <label for="myput">password :</label>
    <input type="text" id="myput" placeholder="type here">
-   <button id="subMIT">submit</button>
+
+   <button id="subMIT">submit</button> -->
+   
+   
+   <form id="form">
+    <label for="name">name :</label>
+   <input type="text" id="name" placeholder="type here" name="name">
+
+   <label for="password">password :</label>
+   <input type="password" id="password" placeholder="type here" name="password">
+
+   <button id="subMIT" type="submit">submit</button>
+   </form>
 
 
    <script>
@@ -63,17 +79,31 @@
         
 
         const myinput = addEventListener('keydown', (e) => {
-         console.log(`clicked ${e.key}`);
+        //  console.log(`clicked ${e.key}`);
     
-       })
+         const myput = addEventListener('keyup', (e) => {
+        //   console.log(`clicked ${e.key}`);
 
-        const myput = addEventListener('keyup', (e) => {
-         console.log(`clicked ${e.key}`);
-    
-       })
-       
+          
+        })
+    })
 
+      
+        const form = document.getElementById('myform');
+
+        form.addEventListener('submit', function(event) {
+           
+           event.preventDefault();
+
+           const formData = new FormData(form);
+
+           for (let [name, value] of formData) {
+               console.log(`${name}: ${value}`);
+                
+              }
+            })
 
    </script>
 </body>
+
 </html>
