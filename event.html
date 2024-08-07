@@ -11,7 +11,7 @@
 <body>
    <!-- <img id="myImage" src="https://images.pexels.com/photos/21739955/pexels-photo-21739955/free-photo-of-sea-and-naples-on-coast-on-horizon.jpeg" alt="" srcset=""> -->
 
-   <img id="myImage" src="https://images.pexels.com/photos/21739955/pexels-photo-21739955/free-photo-of-sea-and-naples-on-coast-on-horizon.jpeg" alt="Sample Image">
+   <!-- <img id="myImage" src="https://images.pexels.com/photos/21739955/pexels-photo-21739955/free-photo-of-sea-and-naples-on-coast-on-horizon.jpeg" alt="Sample Image"> -->
 
    <button id="btn">Change Text</button>
    <p id="para">
@@ -21,24 +21,28 @@
    <div id="mycolor"  style="width: 200px; height: 200px; background-color: red;"> Hover On Me</div>
    
    
-    <!-- <label for="myinput">name :</label>
-   <input type="text" id="myinput" placeholder="type here">
 
-   <label for="myput">password :</label>
-   <input type="text" id="myput" placeholder="type here">
+   <form action="" id="myform">
+    <label for="name" >Name :</label>
+    <input type="text" id="Nameinput" name="name">
 
-   <button id="subMIT">submit</button> -->
-   
-   
-   <form id="form">
-    <label for="name">name :</label>
-   <input type="text" id="name" placeholder="type here" name="name">
+    <label for="password"></label>
+    <input type="text" id="Mypassword" name="password">
 
-   <label for="password">password :</label>
-   <input type="password" id="password" placeholder="type here" name="password">
-
-   <button id="subMIT" type="submit">submit</button>
+    <button id="myBtn">Submit Button</button>
    </form>
+
+
+   <label for="myselect">
+    <select id="myselect">
+       <option value="soham">option1</option>
+       <option value="shubham">option2</option>
+       <option value="bhushan">option3</option>
+    </select>
+   </label> 
+
+
+   <p id="paraID">selected value will appear here</p>
 
 
    <script>
@@ -88,21 +92,27 @@
         })
     })
 
-      
-        const form = document.getElementById('myform');
 
-        form.addEventListener('submit', function(event) {
-           
-           event.preventDefault();
 
-           const formData = new FormData(form);
+       const form = document.getElementById('myform');
 
-           for (let [name, value] of formData) {
-               console.log(`${name}: ${value}`);
-                
-              }
-            })
+       form.addEventListener('submit', (event) => {
+        event.preventDefault();
 
+        const formdata = new FormData(form);
+        for (let [name, value] of formdata)
+        console.log(`${name}: ${value}`);
+         
+       })
+    
+    const select = document.getElementById('myselect')
+    const paragraph = document.getElementById('paraID')
+    
+    select.addEventListener('change', () => {
+        const paraID = select.value;
+
+        paragraph.textContent = `selected value : ${paraID}`
+    })
    </script>
 </body>
 
